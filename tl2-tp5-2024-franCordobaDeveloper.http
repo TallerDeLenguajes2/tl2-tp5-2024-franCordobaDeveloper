@@ -1,0 +1,6 @@
+@tl2_tp5_2024_franCordobaDeveloper_HostAddress = http://localhost:5167
+
+GET {{tl2_tp5_2024_franCordobaDeveloper_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
