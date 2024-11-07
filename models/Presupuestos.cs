@@ -9,6 +9,7 @@ namespace tl2_tp5_2024_franCordobaDeveloper.models
     {
         public int IdPresupuesto { get; set; }
         public required string nombreDestinatario { get; set; }
+        public DateTime FechaCreacion { get; set; }
         public required List<PresupuestosDetalle>  detalle { get; set; }
 
         // Metodos
