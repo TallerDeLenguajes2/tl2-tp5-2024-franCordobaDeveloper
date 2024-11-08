@@ -16,7 +16,7 @@ namespace tl2_tp5_2024_franCordobaDeveloper.Repositorios
 
         public ProductosRepository(string cadenaDeConexion)
         {
-            CadenaDeConexion = cadenaDeConexion;
+            this.CadenaDeConexion = cadenaDeConexion;
         }
 
         public void CrearProducto(Productos producto)

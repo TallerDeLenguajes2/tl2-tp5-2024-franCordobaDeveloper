@@ -16,7 +16,7 @@ namespace tl2_tp5_2024_franCordobaDeveloper.models
 
         public decimal MontoPresupuesto ()
         {
-           return detalle.Sum(d => d.Producto.Precio * d.cantidad);
+           return detalle.Sum(d => d.Producto.Precio * d.Cantidad);
         }
 
         public decimal MontoPresupuestoConIva()
@@ -26,7 +26,7 @@ namespace tl2_tp5_2024_franCordobaDeveloper.models
 
         public int CantidadProductos()
         {
-            return detalle.Sum(p => p.cantidad); // Sum lo utilizo para sumar todos los elementos de una coleccion
+            return detalle.Sum(p => p.Cantidad); // Sum lo utilizo para sumar todos los elementos de una coleccion
         }
     }
 }

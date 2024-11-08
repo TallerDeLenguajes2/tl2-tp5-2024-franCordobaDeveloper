@@ -10,8 +10,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IProductoRepository, ProductosRepository>();
-builder.Services.AddScoped<IPresupuestoRepository, PresupuestoRepository>();
+builder.Services.AddScoped<IProductoRepository>(provider =>
+    new ProductosRepository("Data Source=db/Tienda.db;Cache=Shared"));
+builder.Services.AddScoped<IPresupuestoRepository>(provider =>
+    new PresupuestoRepository("Data Source=db/Tienda.db;Cache=Shared"));
 
 
 var app = builder.Build();

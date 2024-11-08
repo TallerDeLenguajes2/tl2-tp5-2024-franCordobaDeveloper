@@ -13,5 +13,13 @@ namespace tl2_tp5_2024_franCordobaDeveloper.Repositorios.interfaces
         List<Presupuestos> ListarPresupuestos();
         void AgregarProductoAlPresupuesto(int idPresupuesto, PresupuestosDetalle detalle);
         void EliminarPresupuesto(int id);
+
+        /// <summary>
+        /// Devuelve un presupuesto completo a partir del id
+        /// </summary>
+        /// <param name="id">Id del presupuesto</param>
+        /// <returns></returns>
+        Presupuestos ObtenerPresupuestoPorId(int id); 
+          
     }
 }
