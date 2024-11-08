@@ -12,12 +12,18 @@ namespace tl2_tp5_2024_franCordobaDeveloper.Repositorios
     public class ProductosRepository : IProductoRepository
     {
 
-        private readonly string CadenaDeConexion = "Data Source=db/Tienda.db;Cache=Shared";                                                                                    
+        private readonly string CadenaDeConexion = "Data Source=db/Tienda.db;Cache=Shared";
+
+        public ProductosRepository(string cadenaDeConexion)
+        {
+            CadenaDeConexion = cadenaDeConexion;
+        }
+
         public void CrearProducto(Productos producto)
         {
             var queryString = @"
                 INSERT INTO Productos (Descripcion, Precio)
-                Values($descripcion, $precio) ";
+                VALUES($descripcion, $precio) ";
             using SqliteConnection connection = new SqliteConnection(CadenaDeConexion);
             connection.Open();
             var command = new SqliteCommand(queryString, connection);

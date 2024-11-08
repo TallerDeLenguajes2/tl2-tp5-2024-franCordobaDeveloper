@@ -8,7 +8,7 @@ namespace tl2_tp5_2024_franCordobaDeveloper.models
     public class Presupuestos
     {
         public int IdPresupuesto { get; set; }
-        public required string nombreDestinatario { get; set; }
+        public required string NombreDestinatario { get; set; }
         public DateTime FechaCreacion { get; set; }
         public required List<PresupuestosDetalle>  detalle { get; set; }
 
@@ -16,7 +16,7 @@ namespace tl2_tp5_2024_franCordobaDeveloper.models
 
         public decimal MontoPresupuesto ()
         {
-           return detalle.Sum(d => d.producto.Precio * d.cantidad);
+           return detalle.Sum(d => d.Producto.Precio * d.cantidad);
         }
 
         public decimal MontoPresupuestoConIva()

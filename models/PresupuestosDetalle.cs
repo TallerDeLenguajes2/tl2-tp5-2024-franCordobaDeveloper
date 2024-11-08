@@ -7,7 +7,7 @@ namespace tl2_tp5_2024_franCordobaDeveloper.models
 {
     public class PresupuestosDetalle
     {
-        public required Productos producto {get; set;}
+        public required Productos Producto {get; set;}
         public int cantidad { get; set; }
     }
 }
